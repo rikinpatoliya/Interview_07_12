@@ -1,0 +1,88 @@
+[versions]
+agp = "8.4.2"
+kotlin = "2.1.0"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.9.3"
+composeBom = "2024.05.00"
+
+# Multidex
+multidex = "2.0.1"
+
+ksp-version = "2.1.0-1.0.29"
+
+# Navigation
+destination = "1.10.2"
+
+# Log
+timber = "5.0.1"
+# Network
+retrofit2 = "2.11.0"
+logging-interceptor = "4.12.0"
+moshiVersion = "1.15.1"
+sandwich = "2.0.7"
+
+# Hilt
+dagger-hilt ="2.49"
+hiltNavigationCompose = "1.2.0"
+
+# UI
+coil-compose = "2.6.0"
+compressor = "3.0.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# MultiDex
+multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex"}
+
+# Android Studio Preview support
+#androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+#androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+
+# Navigation
+compose-destinations = { group = "io.github.raamcosta.compose-destinations", name = "core", version.ref = "destination"}
+compose-destinations-ksp = { group = "io.github.raamcosta.compose-destinations", name = "ksp", version.ref = "destination"}
+
+# Log
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber"}
+
+# Network
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2"}
+converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit2"}
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging-interceptor"}
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshiVersion"}
+sandwich = { group = "com.github.skydoves", name = "sandwich-retrofit", version.ref = "sandwich"}
+
+# Hilt
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt"}
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger-hilt"}
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+# UI
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose"}
+compressor = { group = "id.zelory", name = "compressor", version.ref = "compressor"}
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt"}
+
