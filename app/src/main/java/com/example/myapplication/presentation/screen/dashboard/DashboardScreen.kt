@@ -33,6 +33,8 @@ import com.example.myapplication.presentation.components.AppScaffold
 import com.example.myapplication.presentation.components.appbar.AppBar
 import com.example.myapplication.presentation.components.loading.AppLoading
 import com.example.myapplication.presentation.components.preview.MyAppPreview
+import com.example.myapplication.presentation.screen.destinations.MedicineDetailScreenDestination
+import com.example.myapplication.presentation.screen.medicineDetail.MedicineDetailScreen
 import com.example.myapplication.presentation.theme.color212529
 import com.example.myapplication.presentation.theme.colorDEE2E6
 import com.example.myapplication.presentation.theme.gilroyFont
@@ -84,12 +86,22 @@ fun DashboardScreen(
         }
     }
     DashboardContain(
-        onBack = {},
+        onBack = {
+            navigator.popBackStack()
+        },
         onLogout = {},
         greeting = "Good ${dashboardViewModel.getTimeOfDayGreeting()}, $userName",
         medicationUiState = state.medicineUiState,
-        onRetry = {},
-        onItemClick = {},
+        onRetry = {
+            dashboardViewModel.getMedicineList()
+        },
+        onItemClick = { item ->
+            navigator.navigate(MedicineDetailScreenDestination(
+                medicationName = item.name,
+                medicationDose = item.dose,
+                medicationStrength = item.strength,
+            ))
+        },
     )
 
 }
@@ -101,7 +113,7 @@ fun DashboardContain(
     greeting: String,
     medicationUiState: UiState<List<MedicationEntity>>,
     onRetry: () -> Unit,
-    onItemClick: (Any) -> Unit,
+    onItemClick: (MedicationEntity) -> Unit,
 
     ) {
     AppScaffold(

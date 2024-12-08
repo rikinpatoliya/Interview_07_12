@@ -8,5 +8,5 @@ import com.example.myapplication.data.db.entities.MedicationEntity
 
 @Database(entities = [MedicationEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun MedicineDao(): MedicationDao
+    abstract fun medicationDao(): MedicationDao
 }

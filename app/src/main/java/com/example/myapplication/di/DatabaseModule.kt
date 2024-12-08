@@ -26,9 +26,8 @@ object DatabaseModule {
     }
 
     @Provides
-    @Singleton
-    fun provideProductDao(database: AppDatabase): MedicationDao {
-        return database.MedicineDao()
+    fun provideMedicationDao(database: AppDatabase): MedicationDao {
+        return database.medicationDao()
     }
 
 //    @Provides
