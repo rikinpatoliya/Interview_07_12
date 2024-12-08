@@ -32,6 +32,7 @@ hiltNavigationCompose = "1.2.0"
 # UI
 coil-compose = "2.6.0"
 compressor = "3.0.1"
+roomKtx = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -78,6 +79,7 @@ hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", ve
 # UI
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-compose"}
 compressor = { group = "id.zelory", name = "compressor", version.ref = "compressor"}
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
