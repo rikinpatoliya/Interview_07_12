@@ -1,11 +1,14 @@
 package com.example.myapplication.di
 
+import android.content.Context
 import com.example.myapplication.constant.AppConst
-import com.example.myapplication.data.datasources.remote.MedicineRemoteDataSource
+import com.example.myapplication.data.remote.MedicationApiServices
+import com.example.myapplication.utils.NetworkUtils
 import com.example.myapplication.utils.moshi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -63,10 +66,14 @@ class NetworkModule {
       }*/
 
     @Provides
+    fun provideNetworkHelper(@ApplicationContext context: Context): NetworkUtils =
+        NetworkUtils(context)
+
+    @Provides
     @Singleton
-    fun provideUserService(retrofit: Retrofit): MedicineRemoteDataSource {
+    fun provideUserService(retrofit: Retrofit): MedicationApiServices {
         return retrofit
-            .create(MedicineRemoteDataSource::class.java)
+            .create(MedicationApiServices::class.java)
     }
 
 

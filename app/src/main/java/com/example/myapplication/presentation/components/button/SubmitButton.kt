@@ -15,8 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.versionx.valetease.presentation.theme.color00A1E2
-import com.versionx.valetease.presentation.theme.colorADB5BD
+import com.example.myapplication.presentation.theme.*
 import com.example.myapplication.presentation.theme.gilroyFont
 
 @Preview

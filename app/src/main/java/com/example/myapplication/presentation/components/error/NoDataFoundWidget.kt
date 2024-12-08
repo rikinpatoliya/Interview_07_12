@@ -14,16 +14,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.versionx.valetease.presentation.components.button.SubmitButton
-import com.versionx.valetease.presentation.components.preview.ValetPreview
-import com.versionx.valetease.presentation.components.space.Height
-import com.versionx.valetease.presentation.theme.color212529
+import com.example.myapplication.presentation.components.button.SubmitButton
+import com.example.myapplication.presentation.components.preview.MyAppPreview
+import com.example.myapplication.presentation.theme.*
 import com.example.myapplication.presentation.theme.gilroyFont
+import com.example.myapplication.presentation.components.space.Height
 
 @Preview
 @Composable
 fun PreviewNoDataFoundWidget() {
-    ValetPreview {
+    MyAppPreview  {
         NoDataFoundWidget(
             text = "No Data Found!",
             onRetry = {

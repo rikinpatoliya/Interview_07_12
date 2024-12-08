@@ -1,4 +1,4 @@
-package com.versionx.valetease.presentation.components.space
+package com.example.myapplication.presentation.components.space
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

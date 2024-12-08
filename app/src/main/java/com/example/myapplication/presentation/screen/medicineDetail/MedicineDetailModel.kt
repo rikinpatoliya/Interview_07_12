@@ -6,8 +6,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MedicineDetailModel @Inject constructor(
-    private val userRepository: UserRepository
-) : BaseViewModel<DashboardState>(initialState = DashboardState()) {
+//    private val userRepository: UserRepository
+) : BaseViewModel<MedicineState>(initialState = MedicineState()) {
 
     init {
 

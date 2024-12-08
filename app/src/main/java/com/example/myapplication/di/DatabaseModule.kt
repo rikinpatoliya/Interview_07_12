@@ -3,7 +3,7 @@ package com.example.myapplication.di
 import android.content.Context
 import androidx.room.Room
 import com.example.myapplication.data.db.AppDatabase
-import com.example.myapplication.data.db.dao.MedicineDao
+import com.example.myapplication.data.db.dao.MedicationDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,12 +22,18 @@ object DatabaseModule {
             context,
             AppDatabase::class.java,
             "app_database"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
     }
 
     @Provides
     @Singleton
-    fun provideProductDao(database: AppDatabase): MedicineDao {
+    fun provideProductDao(database: AppDatabase): MedicationDao {
         return database.MedicineDao()
     }
+
+//    @Provides
+//    @Singleton
+//    fun provideMedicineLocalDataSource(medicineDao: MedicineDao): MedicineLocalDataSource {
+//        return MedicineLocalDataSource(medicineDao)
+//    }
 }

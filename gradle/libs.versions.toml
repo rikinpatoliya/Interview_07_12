@@ -26,7 +26,7 @@ moshiVersion = "1.15.1"
 sandwich = "2.0.7"
 
 # Hilt
-dagger-hilt ="2.49"
+dagger-hilt ="2.51.1"
 hiltNavigationCompose = "1.2.0"
 
 # UI
